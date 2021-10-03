@@ -1,0 +1,34 @@
+<!DOCTYPE html <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family Book</title>
+    <link rel="icon" href="Book.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>My Family Book</h1>
+    <br>
+    <img src=Book.jpg id="pic">
+    <h2 id="name"></h2>
+    <button onclick="next()">Next</button>
+    <script>
+        var image = ["Father.jpg", "Mother.jpg", "Son.jpg"];
+        i = 0;
+
+        function next() {
+            var name = ["Ambika Prasad", "Nivedita", "Adarsh Kumar"];
+            document.getElementById("pic").src = image[i];
+            document.getElementById("name").innerHTML = name[i];
+            i++;
+            if (i > 2) {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
